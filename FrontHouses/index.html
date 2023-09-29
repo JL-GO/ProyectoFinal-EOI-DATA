@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Houseparator</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="/img/lupa.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navegacion">
+      <div id="navLogo" class="d-flex ms-5 ps-5">
+        <a id="nom" href="#"><b>HouseParator</b></a>
+        <a id="nom" href="#">
+          <img id="logo" src="img/lupa.png" class="card-img-top" alt="icono" height="30px">
+        </a>
+      </div>
+      <div class=" me-5 pe-5">
+        <a id="home">
+          <button id="nueva" type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Nueva Consulta
+          </button>
+        </a>
+      </div>
+    </nav>
+  </header>
+  
+  <section class="ms-5 me-5 mt-5 ps-4 row" id="panel">
+  </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Rellena la información del inmueble</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body m-3">
+
+          <form class="row needs-validation" id="form">
+
+            <div class="col-md-5 mt-3">
+              <label for="nombre" class="form-label">Nombre:</label>
+              <input type="text" id="nombre" placeholder="Nombre del inmueble" class="form-control" minlength="2"
+                maxlength="100" required>
+            </div>
+
+            <div class="col-md-2 mt-3">
+              <label for="area" class="form-label">Área (m²):</label>
+              <input type="number" id="area" placeholder="100 m²" class="form-control" value="50" min="1" max="10000"
+                required>
+
+            </div>
+
+            <div class="col-md-2 mt-3">
+              <label for="garaje" class="form-label">Nº Garajes:</label>
+              <input type="number" id="garaje" class="form-control" value="1" min="0" max="10" required>
+
+            </div>
+
+            <div class="col-md-3 mt-3">
+              <label for="chimenea" class="form-label">Nº Chimeneas:</label>
+              <input type="number" id="chimenea" class="form-control" value="0" min="0" max="10" required>
+
+            </div>
+
+            <div class="col-md-2 mt-3">
+              <label for="aseos" class="form-label">Nº Aseos:</label>
+              <input type="number" id="aseos" class="form-control" value="1" min="0" max="10" required>
+            </div>
+
+            <div class="col-md-4 mt-3 form-group">
+
+              <label for="marmol">Tipo de mármol:</label>
+              <select class="form-control mt-2" id="marmol">
+                <option value="0">Mármol blanco</option>
+                <option value="1">Mármol negro</option>
+                <option value="2">Mármol indio</option>
+              </select>
+
+            </div>
+
+            <div class="col-md-3 mt-3 form-group">
+              <label for="ciudad">Ciudad:</label>
+              <select class="form-control mt-2" id="ciudad">
+                <option value="1">Ciudad 1</option>
+                <option value="2">Ciudad 2</option>
+                <option value="3">Ciudad 3</option>
+              </select>
+            </div>
+
+            <div class="col-md-3 mt-3">
+              <label for="pisos" class="form-label">Pisos:</label>
+              <input type="number" id="pisos" class="form-control" value="0" min="0" max="10" required>
+            </div>
+
+            <div class="row ms-2 me-2">
+              <div class="form-check col-md-3 mt-3">
+                <input class="form-check-input" type="checkbox" id="solar">
+                <label class="form-check-label me-2" for="solar">
+                  Placas solares 
+                </label>
+              </div>
+              <div class="form-check col-md-3 mt-3">
+                <input class="form-check-input" type="checkbox" id="electricidad" >
+                <label class="form-check-label" for="electricidad">
+                  Red eléctrica
+                </label>
+              </div>
+
+              <div class="form-check col-md-3 mt-3">
+                <input class="form-check-input" type="checkbox" id="fibra">
+                <label class="form-check-label" for="fibra">
+                  Fibra telefónica
+                </label>
+              </div>
+              <div class="form-check col-md-3 mt-3">
+                <input class="form-check-input" type="checkbox" id="puertas_cristal" >
+                <label class="form-check-label" for="puertas_cristal">
+                  Puertas de cristal
+                </label>
+              </div>
+              <div class="form-check col-md-3 mt-3">
+                <input class="form-check-input" type="checkbox" id="piscina"  >
+                <label class="form-check-label" for="piscina">
+                  Piscina
+                </label>
+              </div>
+              <div class="form-check col-md-3 mt-3">
+                <input class="form-check-input" type="checkbox" id="jardin"  >
+                <label class="form-check-label" for="jardin">
+                  Jardín
+                </label>
+              </div>
+              
+            </div>
+
+            <div class="row ms-3">
+            <div class="col-md-6 mt-3 d-flex">
+              <label id="label_precio" for="precio_venta" class="form-label me-3">Precio de venta:</label>
+              <input type="number" id="precio_venta" class="form-control" value="" min="0" max="1000000" required>
+
+            </div>
+              </div>
+        </div>
+        <div class="modal-footer" id="botonera">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="cerrarModal()">Cerrar</button>
+          <button id="enviar" type="submit" class="btn btn-info">Consultar</button>
+        </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</html>
