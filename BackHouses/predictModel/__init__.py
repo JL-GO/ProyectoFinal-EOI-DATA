@@ -1,0 +1,1 @@
+from predictModel.model_houses import predecir_precio

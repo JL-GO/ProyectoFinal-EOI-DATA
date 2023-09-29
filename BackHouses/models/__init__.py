@@ -1,0 +1,1 @@
+from models.casa import Casa

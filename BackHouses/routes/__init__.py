@@ -1,0 +1,1 @@
+from routes.casa_routes import casas as ruta_casas
