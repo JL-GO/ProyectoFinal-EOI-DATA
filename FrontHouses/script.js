@@ -188,7 +188,7 @@ function cerrarModal(){
          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
           <button id="enviar" type="submit" class="btn btn-info">Consultar</button>
   ` 
-  getProductos();
+  window.location.reload()
 }
 
 function validacion() {
